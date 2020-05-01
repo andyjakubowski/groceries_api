@@ -6,8 +6,3 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-json_string = '[{"order_id":1,"text":"Apples","completed":false,"open":false},{"order_id":2,"text":"Oranges","completed":false,"open":false},{"order_id":3,"text":"Eggs","completed":true,"open":false},{"order_id":-30,"text":"Yoghurt","completed":true,"open":false}]'
-
-array = ActiveSupport::JSON.decode(json_string)
-
-Item.create(array)
