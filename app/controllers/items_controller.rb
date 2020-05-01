@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    puts "hello from items#index"
+    @items = Item.all
+    render json: @items, status: status
   end
 end
