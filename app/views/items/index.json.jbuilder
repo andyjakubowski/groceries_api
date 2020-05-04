@@ -1,4 +1,4 @@
-json.items(@items) do |item|
+json.(@items) do |item|
   json.id(item.id)
   json.order_id(item.order_id)
   json.text(item.text)
