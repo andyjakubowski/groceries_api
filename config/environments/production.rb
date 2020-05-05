@@ -39,6 +39,7 @@ Rails.application.configure do
     'https://andyjakubowski.github.io/groceries',
     /http:\/\/andyjakubowski\.github\.io\/groceries/
   ]
+  config.action_cable.disable_request_forgery_protection = true
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
