@@ -35,9 +35,9 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   config.action_cable.url = 'wss://linda-groceries.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = [
-    'http://andyjakubowski.github.io/groceries',
-    'https://andyjakubowski.github.io/groceries',
-    /http:\/\/andyjakubowski\.github\.io\/groceries/
+    'http://andyjakubowski.github.io',
+    'https://andyjakubowski.github.io',
+    /https?:\/\/andyjakubowski\.github\.*/
   ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
