@@ -3,5 +3,4 @@ json.(@items) do |item|
   json.order_id(item.order_id)
   json.text(item.text)
   json.is_completed(item.is_completed)
-  json.is_open(item.is_open)
 end

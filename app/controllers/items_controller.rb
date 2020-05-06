@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
         orderId: item.order_id,
         text: item.text,
         isCompleted: item.is_completed,
-        isOpen: item.is_open
       },
       clientId: params[:client_id].presence
     )
@@ -32,7 +31,6 @@ class ItemsController < ApplicationController
         orderId: item.order_id,
         text: item.text,
         isCompleted: item.is_completed,
-        isOpen: item.is_open
       },
       clientId: params[:client_id].presence
     )
@@ -60,7 +58,6 @@ class ItemsController < ApplicationController
           :id,
           :order_id,
           :text,
-          :is_completed,
-          :is_open)
+          :is_completed)
     end
 end
