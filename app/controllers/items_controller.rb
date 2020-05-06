@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
       message_type: "item_create",
       item: {
         id: item.id,
+        updateId: item.update_id,
         orderId: item.order_id,
         text: item.text,
         isCompleted: item.is_completed,
@@ -28,6 +29,7 @@ class ItemsController < ApplicationController
       message_type: "item_update",
       item: {
         id: item.id,
+        updateId: item.update_id,
         orderId: item.order_id,
         text: item.text,
         isCompleted: item.is_completed,
@@ -51,6 +53,14 @@ class ItemsController < ApplicationController
 
   private
     def item_params
-      params.require(:item).permit(:id, :order_id, :text, :is_completed, :is_open)
+      params
+        .require(:item)
+        .permit(
+          :id,
+          :update_id,
+          :order_id,
+          :text,
+          :is_completed,
+          :is_open)
     end
 end
