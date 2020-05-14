@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :items
+  resources :items do
+    collection do
+      put 'update_many'
+    end
+  end
+
 end
