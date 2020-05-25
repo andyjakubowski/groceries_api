@@ -37,7 +37,8 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = [
     'http://andyjakubowski.github.io',
     'https://andyjakubowski.github.io',
-    /https?:\/\/andyjakubowski\.github\.*/
+    /https?:\/\/andyjakubowski\.github\.*/,
+    /https?:\/\/localhost.*/
   ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
