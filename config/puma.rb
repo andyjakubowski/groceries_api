@@ -10,9 +10,15 @@ threads min_threads_count, max_threads_count
 
 bind 'tcp://192.168.2.102:9000'
 
+
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
 port        ENV.fetch("PORT") { 9000 }
+
+# ssl_bind '127.0.0.1', '9000', {
+#   key: "config/ssl/groceries_api.localhost.andy.key",
+#   cert: "config/ssl/groceries_api.localhost.andy.crt"
+# }
 
 # Specifies the `environment` that Puma will run in.
 #
