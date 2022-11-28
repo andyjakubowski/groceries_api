@@ -33,11 +33,12 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://linda-groceries.herokuapp.com/cable'
+  server_hostname = "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+  client_host = ENV['CLIENT_HOST']
+  config.action_cable.url = 'wss://#{server_hostname}/cable'
   config.action_cable.allowed_request_origins = [
-    'http://andyjakubowski.github.io',
-    'https://andyjakubowski.github.io',
-    /https?:\/\/andyjakubowski\.github\.*/,
+    "http://#{client_host}",
+    "https://#{client_host}",
     /https?:\/\/localhost.*/
   ]
 
