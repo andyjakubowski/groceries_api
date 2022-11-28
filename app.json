@@ -1,0 +1,40 @@
+{
+  "name": "Linda Groceries API",
+  "description": "API-only Rails app backing Linda Groceries, the real time and offline-capable grocery list app",
+  "repository": "https://github.com/andyjakubowski/groceries_api",
+  "website": "https://andyjakubowski.github.io/groceries/",
+  "logo": "https://github.com/andyjakubowski/groceries_api/raw/master/public/logo.png",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "14"
+      }
+    },
+    {
+      "plan": "heroku-redis",
+      "options": {
+        "version": "6"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "HEROKU_APP_NAME": {
+      "description": "The name of the Heroku app you’re creating. Used to configure Action Cable. It must match the Heroku app name exactly, or the design token streaming won’t work.",
+      "value": "your-heroku-app-name"
+    },
+    "CLIENT_HOST": {
+      "description": "The URL of the client app subscribing to API updates. Used to set allowed request origins for Action Cable.",
+      "value": "cool-client.example.com"
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "stack": "heroku-20"
+}
