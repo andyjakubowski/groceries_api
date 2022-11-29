@@ -23,3 +23,7 @@
 
 # Ignore Visual Studio Code workspace files.
 *.code-workspace
+
+# Ignore the SSL certificates you generated to develop locally with HTTPS
+/config/ssl/*
+!/config/ssl/.keep
