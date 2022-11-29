@@ -8,7 +8,12 @@ max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
 threads min_threads_count, max_threads_count
 
-bind 'tcp://192.168.2.102:9000'
+ENV['GROCERIES_API_HTTPS'] ||= "false"
+
+# Do this only when running locally with HTTPS
+if ENV.fetch("GROCERIES_API_HTTPS") === 'true' then
+  bind 'tcp://192.168.2.102:9000'
+end
 
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
