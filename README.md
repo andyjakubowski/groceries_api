@@ -1,6 +1,5 @@
 # Linda Groceries API
 
-[![Open Demo](public/open-demo-button.svg)](https://andyjakubowski.github.io/groceries/)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/andyjakubowski/groceries_api)
 
 An API-only Rails app acting as a server backing [`groceries`](https://github.com/andyjakubowski/groceries): a real time, offline-capable grocery list.
@@ -10,10 +9,6 @@ An API-only Rails app acting as a server backing [`groceries`](https://github.co
 - Grocery list items are persisted in an `items` table inside a Postgres database.
 - Rails Action Cable is used to broadcast `items` CRUD operations with a WebSocket.
 - Action Cable is configured with Redis in production.
-
-## Play with the [live demo](https://andyjakubowski.github.io/groceries/)
-
-The client-side repo [`groceries`](https://github.com/andyjakubowski/groceries) has a bunch of ideas for what to do in the demo 🌟.
 
 ## Installation and Usage
 

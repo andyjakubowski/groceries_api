@@ -2,7 +2,6 @@
   "name": "Linda Groceries API",
   "description": "API-only Rails app backing Linda Groceries, the real time and offline-capable grocery list app",
   "repository": "https://github.com/andyjakubowski/groceries_api",
-  "website": "https://andyjakubowski.github.io/groceries/",
   "logo": "https://github.com/andyjakubowski/groceries_api/raw/master/public/logo.png",
   "addons": [
     {
